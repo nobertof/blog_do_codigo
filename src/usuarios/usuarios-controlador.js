@@ -29,7 +29,9 @@ module.exports = {
     const usuarios = await Usuario.lista();
     res.json(usuarios);
   },
-
+  login:(req,res)=>{
+    res.status(204).send()
+  },
   deleta: async (req, res) => {
     const usuario = await Usuario.buscaPorId(req.params.id);
     try {
